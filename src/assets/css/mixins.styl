@@ -1,0 +1,79 @@
+width-height($w,$h)
+  width $w
+  height $h
+
+clearfix()
+  &::after
+    content ''
+    display block
+    clear both
+
+ellipse()
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+
+more-wrap($n)
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  overflow: hidden;
+
+flex-center()
+  display flex
+  justify-content center
+  align-items center
+
+border-bottom-1px($c)
+  position relative
+  &::before
+    content ''
+    display block
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    height 1px
+    background-color $c
+    @media only screen and (-webkit-device-pixel-ratio:2)
+      transform scaleY(.5)
+    @media only screen and (-webkit-device-pixel-ratio:3)
+      transform scaleY(.3333333)
+
+border-right-1px($c)
+  position relative
+  &::before
+    content ''
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    width 1px
+    background-color $c
+    @media only screen and (-webkit-device-pixel-ratio:2)
+      transform scaleX(.5)
+    @media only screen and (-webkit-device-pixel-ratio:3)
+      transform scaleX(.3333333)
+
+border-top-1px($c)
+  position relative
+  &::before
+    content ''
+    display block
+    position absolute
+    left 0
+    right 0
+    top 0
+    height 1px
+    background-color $c
+    @media only screen and (-webkit-device-pixel-ratio:2)
+      transform scaleY(.5)
+    @media only screen and (-webkit-device-pixel-ratio:3)
+      transform scaleY(.3333333)
+
+border-1px($c)
+  @media screen and (-webkit-min-device-pixel-ratio: 2)
+    border 0.5px solid $c
+  @media screen and (-webkit-min-device-pixel-ratio: 3)
+    border 0.333333px solid $c
