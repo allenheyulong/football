@@ -46,5 +46,9 @@ npm run dev or npm start
 
 
 # 项目截图
+![首页](https://github.com/JonasVon/football/blob/master/screen/%E9%A6%96%E9%A1%B5.png)
 ![商城](https://github.com/JonasVon/football/blob/master/screen/%E5%95%86%E5%9F%8E.png)
+![游戏](https://github.com/JonasVon/football/blob/master/screen/%E6%B8%B8%E6%88%8F.png)
+![比赛](https://github.com/JonasVon/football/blob/master/screen/%E6%AF%94%E8%B5%9B.png)
+![数据](https://github.com/JonasVon/football/blob/master/screen/%E6%95%B0%E6%8D%AE.png)
 
