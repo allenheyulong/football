@@ -2,18 +2,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import VueTouch from 'vue-touch'
+import VueLazyload from 'vue-lazyload'
 
 /*重置样式*/
 import './assets/css/reset.css'
 /*rem适配*/
 import './assets/js/rem'
 
-Vue.use(VueTouch, {name: 'v-touch'})
-
-VueTouch.config.swipe = {
-    threshold: 100 //手指左右滑动距离
-}
+Vue.use(VueLazyload, {
+    preLoad: 1.3,
+    attempt: 3
+})
 
 new Vue({
     el:'#app',

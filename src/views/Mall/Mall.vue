@@ -16,9 +16,9 @@
                     <img v-if="loading_top" src="./images/timg.gif" alt="">
                 </div>
                 <!--搜索条-->
-                <SearchBar :hotwords="hotwords" />
+                <SearchBar :hotwords="hotwords"/>
                 <!--走马灯-->
-                <Marquee :recommend="mall.slides" />
+                <Marquee :recommend="mall.slides"/>
                 <!--主页导航-->
                 <nav>
                     <div class="item" v-for="(item,index) in mall.categories" :key="index">

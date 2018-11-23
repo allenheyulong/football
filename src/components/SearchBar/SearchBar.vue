@@ -1,7 +1,7 @@
 <template>
     <!--搜索条-->
     <form action="#" class="search-form">
-        <router-link class="container" tag="div" to="/search">
+        <router-link class="container" tag="div" :to="{path:'/search/0'}">
             <span class="iconfont icon-sousuo"></span>
             <input type="text" :placeholder="hotwords" />
         </router-link>

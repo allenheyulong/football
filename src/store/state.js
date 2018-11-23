@@ -16,4 +16,5 @@ export default {
     person_type:'', // 球员榜分类数据
     cub_type:'', // 球队榜分类数据
     schedule:'', // 赛程描述对象
+    searchHistory:[], // 搜索历史记录
 }

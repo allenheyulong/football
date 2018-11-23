@@ -104,8 +104,20 @@ export const reqMall = () => ajax('/mall/api/index_new',{version})
 /*请求商城热搜关键字*/
 export const reqHotWord = () => ajax('/api/search/default/hot_keywords',{type:'product'})
 
+/*请求商城大家都在搜的关键词*/
+export const reqWordList = () => ajax('/api/search/hot_keywords',{type:'product'})
+
 /*请求商城热门推荐*/
 export const reqMallRecommend = () => ajax('/mall/api/recommends')
+
+/*请求商城搜索尺码*/
+export const reqSize = () => ajax('/mall/api/search_keyword')
+
+/*请求商品数据*/
+export const reqCommodity = (keywords,page,order,sort) => ajax('/api/search',{keywords,type:'product',page,order,sort})
+
+/*请求某专题模块数据*/
+export const reqFeatures = (page,order,sort) => ajax('/mall/api/page/' + page,{order,sort})
 
 /*请求热门推荐下一批数据*/
 export const reqNextRecommend = (next) => ajax('/mall/api/recommends',{next})

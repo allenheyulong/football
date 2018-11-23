@@ -1,6 +1,6 @@
 <template>
     <div class="play-view">
-        <Header>
+        <Header type="1">
             <h1 slot="app_name" class="app-name">懂球帝</h1>
             <div slot="title"></div>
             <div slot="right" class="right">

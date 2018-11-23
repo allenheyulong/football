@@ -2,12 +2,12 @@
     <!--走马灯-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(item,index) in recommend" :key="index">
+            <router-link tag="div" :to="{path:'/search/' + item.scheme.slice(23)}" class="swiper-slide" v-for="(item,index) in recommend" :key="index">
                 <a href="javascript:" class="link-item">
                     <img :src="item.thumb ? item.thumb : item.img_url">
                     <span>{{item.title}}</span>
                 </a>
-            </div>
+            </router-link>
         </div>
         <!-- 分页器 -->
         <div class="swiper-pagination"></div>

@@ -12,6 +12,7 @@ import Category from '../views/Category/Category'
 import ShoppingCar from '../views/ShoppingCar/ShoppingCar'
 import ShoppingMall from '../views/ShoppingMall/ShoppingMall'
 import Article from '../views/Article/Article'
+import Search from '../views/Search/Search'
 
 
 Vue.use(VueRouter)
@@ -31,5 +32,6 @@ export default new VueRouter({
         {path:'/shoppingCar',component:ShoppingCar},
         {path:'/shoppingMall',component:ShoppingMall},
         {path:'/articles/:id',component:Article},
+        {path:'/search/:page',component:Search},
     ]
 })

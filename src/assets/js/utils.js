@@ -38,6 +38,11 @@ export function transToArr(arr) {
     return Array.from(arr)
 }
 
+/*数组基本类型去重*/
+export function unique(arr) {
+    return Array.from(new Set(arr))
+}
+
 /*获取当前时间,并且以格式 YYYY-MM-DDHH:mm:ss返回,用于请求比赛数据*/
 export function currentTime() {
     let date = new Date().getTime()

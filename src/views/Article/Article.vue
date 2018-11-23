@@ -6,7 +6,7 @@
         </Header>
         <div class="content cal-wrapper">
             <div class="wrap">
-                <div v-html="articleText"></div>
+                <div v-html="articleText" v-lazy-container="{ selector: '.con img',error:'' }"></div>
             </div>
         </div>
     </div>
@@ -27,11 +27,14 @@
         },
         async created(){
             this.articleText = await reqArtHTML(this.$route.params.id)
+            this.$Lazyload.$on('loaded',() => {
+                this.scroll.refresh()
+            })
         },
         mounted(){
             this.$nextTick(() => {
                 calHeight(1.95)
-                new BScroll('.content',{
+                this.scroll = new BScroll('.cal-wrapper',{
                     scrollY:true,
                     click:true,
                 })
